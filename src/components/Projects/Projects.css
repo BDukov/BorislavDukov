@@ -7,20 +7,21 @@
 
 
 .projects #headline {
-    margin: 2em 0;
+    margin: 2em 0 4em 0;
     position: relative;
     padding: 0 10px 0 10px;
     text-align: center;
     text-transform: uppercase;
+    font-size: 1.4em;
 }
 
-#headline::before, #headline::after {
+/* #headline::before, #headline::after {
     content: '';
     position: absolute;
-    top: 50%; /* Position at the middle vertically */
-    width: 40%; /* Full width */
-    height: 1px; /* Height of the line */
-    background-color: #CCCC; /* Black color */
+    top: 50%; 
+    width: 40%; 
+    height: 1px; 
+    background-color: #CCCC; 
 }
 
 #headline::before {
@@ -29,13 +30,15 @@
 
 #headline::after {
     right: 0;
-}
+} */
 
 .projects .container {
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: space-around;
+    gap: 3em;
+    flex-wrap: wrap;
 }
 
 .projects .container article {
@@ -49,6 +52,7 @@
     position: relative;
     transition: transform 0.35s ease-in-out;
     cursor: pointer;
+    border-radius: 1em;
 }
 
 .projects .container article:hover {
@@ -60,6 +64,7 @@
     height: 300px; 
     overflow: hidden; 
     position: relative; 
+    border-radius: 1em;
 }
 
 .projects .container article img {

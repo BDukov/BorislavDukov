@@ -34,7 +34,6 @@ export default function Projects() {
                     <p>Portfolio Website</p>
                 </article>
 
-
             </div>
             </div></>
     );
