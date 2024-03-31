@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import './Footer.css';
 
@@ -6,6 +8,7 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Footer() {
+    const [isHover, setIsHover] = useState(false);
 
     return(
         <>
@@ -14,8 +17,12 @@ export default function Footer() {
                 <p>&copy; Borislav Dukov 2024</p>
             </div>
 
-            <div className="go-to-top">
-            <FontAwesomeIcon icon={faChevronUp} style={{fontSize: '3em', color: 'black'}}/>
+            <div className="go-to-top"
+            onMouseEnter={() => setIsHover(true)}
+            onMouseLeave={() => setIsHover(false)}
+            >
+            <FontAwesomeIcon icon={faChevronUp} style={{fontSize: '3em', color: isHover ? 'black' : '#999999'}}
+            />
             </div>
 
             <ul className="nav">

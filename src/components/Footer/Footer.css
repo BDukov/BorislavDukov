@@ -35,8 +35,12 @@
   .footer .nav li {
       margin-left: 0.5em;
       list-style-type: none;
-      color:black;
+      color:#999999;
   }
+
+  .footer .nav li:hover {
+    color:black
+}
 
   .footer .go-to-top {
     width: 100px;
