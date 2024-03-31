@@ -56,6 +56,11 @@
     color: white;
 }
 
+.nav li:hover {
+  color: #CCC;
+}
+
+
 
 .social-icons { 
     display: flex;
@@ -63,4 +68,16 @@
     align-items: center;
     justify-content: center;
     gap: 2em;
+}
+
+.social-icons a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.social-icons a:hover {
+  color: #CCC;
+}
+.social-icons li:hover {
+  color: #CCC;
 }
