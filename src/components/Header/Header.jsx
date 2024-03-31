@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -28,7 +29,7 @@ export default function Header() {
         <div className="content box">
 
         <Link to={"/"}>
-          <img src="./BD.png" alt="" />
+          <img src="./BD-bg.png" alt="" />
         </Link>
 
         <ul className="nav">
