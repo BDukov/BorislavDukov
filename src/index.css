@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -14,9 +14,32 @@ html {
 }
 
 body {
-  padding: 0 auto;
+  margin: 0 auto;
+  padding: 0;
 }
 
-.box {
-  max-width: 1200px;
+
+h1,
+h2,
+h3,
+p,
+a {
+  color: #515151;
+  font-weight: 300; 
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.body {
+  padding: 0 auto;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
