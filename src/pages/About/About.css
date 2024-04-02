@@ -1,0 +1,67 @@
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+/* BANNER */
+
+.about .banner {
+    margin-top: 6em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .banner .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about .banner .container .banner-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about .banner .banner-info h1 {
+    font-size: 5em;
+    font-weight: 700;
+}
+
+.about .banner .banner-info p {
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+.about .banner .container .banner-image {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/* SKILLS */
+
+.about .skills {
+    padding: 5em 0 5em 0;
+    background-color: #FAFAFA;
+}
+
+.about .skills .container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+}
+
+.about .skills .container .design-skills, .about .skills .container .coding-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em
+}
+
+.about .skills .container .design-skills h3, .about .skills .container .coding-skills h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}

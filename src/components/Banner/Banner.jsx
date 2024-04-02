@@ -18,7 +18,7 @@ export default function Banner() {
             <img src="./dukov.png" alt=""/>
             </div> */}
             <div className='img-container' id="image2">
-            <img src="./dukov1.png" alt=""/>
+            <img src="./dukov.png" alt=""/>
             </div>
         </div>
         <div className="banner-info2">
