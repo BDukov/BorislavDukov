@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
+import { Link } from "react-router-dom";
+
 import "./About.css";
 
 export default function About() {
@@ -78,71 +81,82 @@ export default function About() {
             <div className="container">
                 <h3>Тechnologies I use</h3>
                 <div className="stack">
+
                     <div id="angular" className="tech-app">
                         <h3 className="alt">Angular</h3>
-                        <a href="https://angular.io/">
+                        <Link to='https://angular.io/' target="_blank">
                         <img src="./angular.png" alt="" />
-                        </a>
+                        </Link>
                     </div>
+
                     <div id="react" className="tech-app">
                         <h3 className="alt">React</h3>
-                        <a href="https://react.dev/">
+                        <Link to='https://react.dev/' target="_blank">
                         <img src="./react.png" alt="" />
-                        </a>
+                        </Link>
                     </div>
+
                     <div id="wordpress" className="tech-app">
                         <h3 className="alt">WordPress</h3>
-                        <a href="https://wordpress.com/">
+                        <Link to='https://wordpress.com/' target="_blank">
                         <img src="./wordpress.png" alt="" />
-                        </a>
+                        </Link>
                     </div>
+
                     <div id="node-js" className="tech-app">
                         <h3 className="alt">NodeJs</h3>
-                        <a href="https://nodejs.org/en">
+                        <Link to='https://nodejs.org/en' target="_blank">
                         <img src="./nodejs.png" alt="" />
-                        </a>
+                        </Link>
                     </div>
+
                     <div id="mongo" className="tech-app">
                         <h3 className="alt">MongoDB</h3>
-                        <a href="https://www.mongodb.com/">
+                        <Link to='https://www.mongodb.com/' target="_blank">
                         <img src="./mongodb.png" alt="" />
-                        </a>
+                        </Link>
                     </div>
+
                     <div id="javascript" className="tech-app">
                         <h3 className="alt">JavaScript</h3>
-                        <a href="https://www.javascript.com/">
+                        <Link to='https://www.javascript.com/' target="_blank">
                         <img src="./javascript.png" alt="" />
-                        </a>
+                        </Link>
                     </div>
+
                     <div id="typescript" className="tech-app">
                         <h3 className="alt">TypeScript</h3>
-                        <a href="https://www.typescript.org/">
+                        <Link to='https://www.typescript.org/' target="_blank">
                         <img src="./typescript.png" alt="" />
-                        </a>
+                        </Link>
                     </div>
+
                     <div id="html" className="tech-app">
                         <h3 className="alt">HTML</h3>
-                        <a href="">
+                        <Link to='' target="_blank">
                         <img src="./html.png" alt="" />
-                        </a>
+                        </Link>
                     </div>
+
                     <div id="css" className="tech-app">
                         <h3 className="alt">CSS</h3>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+                        <Link to='https://developer.mozilla.org/en-US/docs/Web/CSS' target="_blank">
                         <img src="./css.png" alt="" />
-                        </a>
+                        </Link>
                     </div>
+
                     <div id="openai" className="tech-app">
                         <h3 className="alt">OpenAi</h3>
-                        <a href="https://openai.com/">
+                        <Link to='https://openai.com/' target="_blank">
                         <img src="./openai.png" alt="" />
-                        </a>
+                        </Link>
                     </div>
+
                     <div id="scrum" className="tech-app">
                         <h3 className="alt">SCRUM</h3>
-                        <a href="https://www.scrum.org/">
+                        <Link to='https://www.scrum.org/' target="_blank">
                         <img src="./scrum.png" alt="" />
-                        </a>
+                        </Link>
                     </div>
                     
                 </div>
