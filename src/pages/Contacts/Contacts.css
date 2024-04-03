@@ -1,0 +1,42 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts .banner {
+    margin-top: 6em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacts .banner .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contacts .banner .container .banner-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contacts .banner .banner-info h1 {
+    font-size: 5em;
+    font-weight: 700;
+}
+
+.contacts .banner .banner-info h2 {
+    margin-top: 1em;
+}
+
+.contacts .banner .banner-info .social-icons {
+    margin-top: 3em;
+}
+
+.contacts .banner .container .banner-image {
+    display: flex;
+    align-items: flex-end;
+}

@@ -163,6 +163,45 @@ export default function About() {
 
             </div>
         </div>
+
+        <div className="story">
+            <div className="container">
+                <div className="story-info">
+                    <h3>My story</h3>
+                    <p>
+                    I am 33 years old and a real enthusiast in the world of
+                the programming to which I have directed my passion and efforts through
+                last years. With a diploma in Web Developer and a master's degree in
+                Project management, I have created a number of successful ones
+                projects using technologies like Angular and React. With rich
+                skill set in technologies such as, JavaScript, TypeScript, HTML,
+                CSS, Firebase, WordPress, PHP, MongoDB and NodeJs.
+              </p>
+              <p>
+              My quest for constant self-improvement and learning
+                excels in programming. I totally am
+                dedicated to the development and improvement of his skills.
+              </p>
+              <p>
+              In my spare time, I find solace and inspiration in
+                spinning fishing and reading books, especially related ones
+                with stoicism. My love for nature, mountains, rivers and
+                dams not only enriches my personal life but also influences the
+                my professional activity, where this passion is reflected in
+                my designs and applications.
+              </p>
+              <p>
+              My goals are to provide web solutions that excel
+                customer expectations and create measurable success for them. I am dedicated to bringing innovation and creative approaches to everyone
+                a project with which I contribute to the enrichment of the Internet
+                the space and create a positive impact.
+                </p>
+                </div>
+                <div className="story-image">
+                    <img src="./freelance.jpg" alt="" />
+                </div>
+            </div>
+        </div>
       </div>
     </>
   );

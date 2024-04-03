@@ -44,7 +44,7 @@
 /* SKILLS */
 
 .about .skills {
-    padding: 5em 0 5em 0;
+    padding: 6em 0;
     background-color: #FAFAFA;
     border-bottom: 1px solid #CCC ;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
@@ -72,7 +72,7 @@
 
 .about .hobby {
     /* display: flex; */
-    padding: 5em 0 5em 0;
+    padding: 6em 0;
     border-bottom: 1px solid #CCC ;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -102,7 +102,7 @@
 /* APPLICATIONS  */
 
 .about .applications {
-    padding: 5em 0 5em 0;
+    padding: 6em 0;
     background-color: #FAFAFA;
     border-bottom: 1px solid #CCC ;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
@@ -127,7 +127,7 @@
     align-items: center;
     flex-wrap: wrap;
     max-width: 1400px;
-    gap: 5em 3em;
+    gap: 5em;
 }
 
 .about .applications .container .stack .tech-app {
@@ -171,4 +171,36 @@
 
 .about .applications .container .stack .tech-app:hover .alt {
     display: block;
+}
+
+/* STORY */
+
+.about .story {
+    padding: 6em 0;
+}
+
+.about .story .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3em;
+}
+
+.about .story .container .story-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2em
+}
+
+.about .story .container .story-info h3 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.about .story .container .story-image img {
+    width:400px;
+    height: auto;
+    border-radius: 2em;
 }
