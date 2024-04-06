@@ -1,4 +1,6 @@
+// App.js
 import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from './services/scrollToTop';
 
 import './App.css'
 
@@ -8,23 +10,19 @@ import Footer from './components/Footer/Footer';
 import About from './pages/About/About';
 import Contacts from './pages/Contacts/Contacts';
 
-
 function App() {
-
-
   return (
     <>
-    <Header></Header>
-
-    <Routes>
-      <Route path='/' element={<Home/>}></Route>
-      <Route path='/about' element={<About/>}></Route>
-      <Route path='/contacts' element={<Contacts></Contacts>}></Route>
-    </Routes>
-
-    <Footer></Footer>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contacts' element={<Contacts />} />
+      </Routes>
+      <Footer />
+      <ScrollToTop /> {/* Включване на компонента ScrollToTop тук */}
     </> 
   )
 }
 
-export default App
+export default App;

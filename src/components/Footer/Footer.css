@@ -61,4 +61,9 @@
   .footer .go-to-top:hover {
     transform: scale(1.1);
   }
+  
+  
+  .footer .go-to-top button {
+    background-color: #F5F5F5;
 
+  }

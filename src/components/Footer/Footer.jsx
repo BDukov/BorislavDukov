@@ -9,6 +9,14 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
     const [isHover, setIsHover] = useState(false);
+    
+    const scrollUp = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+    }); 
+    }
+
 
     return(
         <>
@@ -21,8 +29,11 @@ export default function Footer() {
             onMouseEnter={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
             >
+                <button onClick={scrollUp} style={{border: "none"}}>
+
             <FontAwesomeIcon icon={faChevronUp} style={{fontSize: '3em', color: isHover ? 'black' : '#999999'}}
             />
+                </button>
             </div>
 
             <ul className="nav">
