@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faLinkedin,
   faUpwork,
 } from "@fortawesome/free-brands-svg-icons";
+
+import emailjs from '@emailjs/browser';
 
 import { Link } from "react-router-dom";
 import "./Contacts.css";
@@ -25,6 +27,26 @@ function SocialIcon({ icon }) {
 }
 
 export default function Contacts() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_enzw79q', 'template_48p27yd', form.current, {
+        publicKey: '_VhU5gO9PUFi_rqRg',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          form.current.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
   return (
     <>
       <div className="contacts">
@@ -69,12 +91,42 @@ export default function Contacts() {
           </div>
         </div>
 
-        <div className="contact-form">
+        <div className='contacts-section'>
+          <div className="container">
             <h3>Send me an email</h3>
-            <div className="form">
 
-            </div>
-        </div>
+        <form className="contact-form" ref={form} onSubmit={sendEmail}>
+
+          <div className="top">
+
+          <div className="left">
+          <div className="form-group">
+            <label htmlFor="fullName">Name</label>
+            {/* <br /> */}
+            <input type="text" id="fullName" name="to_name" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            {/* <br /> */}
+            <input type="email" id="email" name="from_name" required />
+          </div>
+          </div>
+
+          <div className="right">
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            {/* <br />   */}
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          </div>
+
+          </div>
+
+          <button type="submit">Send email</button>
+      
+        </form>
+          </div>
+      </div>
       </div>
     </>
   );
