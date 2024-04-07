@@ -139,3 +139,9 @@
     margin-right: 2em;
   }
 }
+
+@media (max-width: 718px){
+  .mobile-nav {
+    font-size: 1em;
+  }
+}

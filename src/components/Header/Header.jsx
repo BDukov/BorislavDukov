@@ -38,7 +38,7 @@ export default function Header() {
         </Link>
 
         <div className="mobile-nav" onClick={toggleMobileMenu}>
-          <FontAwesomeIcon icon={faBars} style={{ color: "white", fontSize: '2em' }}/>
+          <FontAwesomeIcon icon={faBars} style={{ color: "white", fontSize: '2em' }} id='mobile-menu-button'/>
         </div>
 
         <ul className={`nav ${showMobileMenu ? 'show' : ''}`}>
