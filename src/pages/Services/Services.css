@@ -1,0 +1,13 @@
+.services-page {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-page .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

@@ -67,3 +67,15 @@
     background-color: #F5F5F5;
 
   }
+
+  @media (max-width: 828px) {
+    .footer .nav {
+      display: none;
+    }
+
+    .footer .go-to-top{
+      width: 50px;
+      height: 50px;
+      bottom: 80%
+    }
+  }
