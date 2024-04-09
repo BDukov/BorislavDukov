@@ -8,6 +8,7 @@ export default function Services() {
         <div className="services-page">
             <div className="container">
                 <h2>I'm currently working on this page...</h2>
+                <img src="./Bdukov.png" alt="" />
             </div>
         </div>
         </>

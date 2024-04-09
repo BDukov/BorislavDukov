@@ -12,7 +12,7 @@ export default function Projects() {
 
                 <article>
                     <div className="image-container">
-                    <img src="./dicheva-home.png" alt="" />
+                    <img src="./Projects/dicheva-home.png" alt="" />
                     </div>
                     <h3>Nadezhda Dicheva</h3>
                     <p>Portfolio Website</p>
@@ -20,7 +20,7 @@ export default function Projects() {
 
                 <article>
                     <div className="image-container">
-                    <img src="./honey-app.png" alt="" />
+                    <img src="./Projects/honey-app.png" alt="" />
                     </div>
                     <h3>Honey</h3>
                     <p>Blog</p>
@@ -28,7 +28,7 @@ export default function Projects() {
 
                 <article>
                     <div className="image-container">
-                    <img src="./Plan B - Contacts.png" alt="" />
+                    <img src="./Projects/Plan B - Contacts.png" alt="" />
                     </div>
                     <h3>PlanB Web Services</h3>
                     <p>Portfolio Website</p>

@@ -1,0 +1,136 @@
+.projects-page {
+    /* height: 90vh; */
+    /* padding: 8em 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* PORTFOLIO */
+.projects-page .projects-section {
+    /* margin-top: 6em; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects-page .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projects-page .projects-section .container h1 {
+    margin: 2em 0 0 0;
+}
+
+.projects-page .projects-section .container img {
+    margin-bottom: 1em;;
+}
+
+.portfolio-content {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2em;
+    margin: 0 0 3em 0;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #CCC;
+    width: 400px;
+    height: 255px;
+    /* height: 30vh; */
+    cursor: pointer;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    /* border-radius: 50px; */
+    overflow: hidden;
+    transition: border-color 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease; /* Transition effect for border color, transform, and box-shadow */
+
+}
+
+.card:hover {
+    border-color: #000; /* Change border color on hover */
+    transform: scale(1.05); /* Scale the card on hover */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add box shadow on hover */
+    z-index: 90;
+}
+
+.card .on-hover {
+    display: none;
+    /* background: #D9C5B5; */
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+}
+
+.card:hover > .on-hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: white;
+}
+
+#category {
+    font-size: 0.9em;
+    margin-top: 0.3em;
+    font-weight: 600;
+    text-shadow: none;
+    color: black;
+    text-shadow: 1px 1px 1px white;
+}
+
+.on-hover p {
+    font-weight: 700;
+    color: black;
+    text-shadow: 2px 2px 0px white;
+}
+
+.ar-16x9 {
+    overflow: hidden;
+    position: relative;
+}
+
+.ar-16x9:after {
+    display: block;
+    content: '';
+}
+
+.ar-16x9 img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 1280px) {
+    .card {
+        width: 35vw;
+    }
+    
+}
+
+@media (max-width: 720px) {
+    .card {
+        width: 80vw
+    }
+
+    .portfolio-content {
+        flex-direction: column;
+    }
+}
