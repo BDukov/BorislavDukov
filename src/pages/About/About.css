@@ -204,3 +204,89 @@
     height: auto;
     border-radius: 2em;
 }
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 828px) {
+    .about .banner .container {
+        flex-direction: column;
+        padding-bottom: 2em;
+    }
+
+    .about .banner .container .banner-info {
+        align-items: start;
+        justify-content: flex-start;
+    }
+
+    .about .banner .container .banner-image img {
+        display: none;
+    }
+
+    .about .skills {
+        padding: 3em 0;
+    }
+
+    .about .skills .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        margin: 0 auto;
+    }
+
+    .about .skills .container img {
+        width:250px;
+    }
+
+    .coding-skills { 
+        align-self: center;
+    }
+
+    .coding-skills h3 {
+        text-align: center;
+    }
+
+    .about .hobby {
+        padding: 3em 0;
+    }
+
+    .about .hobby .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .hobby .hobby-image img {
+        width: 250px;
+    }
+    .about .hobby .hobby-info {
+        padding: 0 1em;
+    }
+
+    .about .hobby .hobby-info h3 {
+        text-align: center;
+    }
+
+    .about .applications {
+        padding: 3em 0;
+    }
+
+    .about .applications .stack {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .about .story {
+        padding: 3em 0;
+    }
+
+    .about .story .container {
+        flex-direction: column;
+    }
+
+    .about .story .container .story-image img {
+        width: 250px;
+    }
+
+    .about .story .container .story-info {
+        padding: 0 2em;
+    }
+}

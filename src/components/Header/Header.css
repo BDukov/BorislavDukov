@@ -82,7 +82,7 @@
 
 @media (max-width: 828px) {
 
-  .social-icons {
+  .header .social-icons {
     display: none;
   }
 
