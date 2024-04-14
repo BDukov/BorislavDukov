@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 
 const usePageSEO = ({
+    type,
     title,
     description,
     keywords=[],
@@ -14,6 +15,7 @@ const usePageSEO = ({
 
         setMetaTag('name', 'description', description);
         setMetaTag('name', 'keywords', keywords);
+        setMetaTag('proerty', 'og:type', type)
         setMetaTag('property', 'og:title', ogTitle || title);
         setMetaTag('property', 'og:description', ogDescription || description);
         setMetaTag('property', 'og:image', ogImage);
@@ -23,7 +25,8 @@ const usePageSEO = ({
             //do any kind of cleanum here
         }
 
-    }, [title,
+    }, [type,
+        title,
         description,
         keywords,
         ogTitle,

@@ -31,6 +31,7 @@ function SocialIcon({ icon }) {
 export default function Contacts() {
 
   usePageSEO({
+    type: 'website',
     title: 'Contacts page',
     description: 'Contacts with Borislav Dukov - Web Developer',
     keywords: ["contacts", 'borislav', 'dukov', 'web developer', 'developer'],

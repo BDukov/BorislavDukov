@@ -9,6 +9,7 @@ import Projects from '../../components/Projects/Projects';
 export default function Home(){
 
     usePageSEO({
+        type: 'website',
         title: 'Home page',
         description: 'About Borislav Dukov - Web Developer',
         keywords: ["home", 'borislav', 'dukov', 'web developer', 'developer'],

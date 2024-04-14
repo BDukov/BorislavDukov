@@ -10,6 +10,7 @@ export default function ProjectsPage(){
         title: 'Projects page',
         description: 'Projects of Borislav Dukov - Web Developer',
         keywords: ["projects", 'borislav', 'dukov', 'web developer', 'developer', 'portfolio'],
+        type: 'website',
         ogTitle: 'Projects page',
         ogDescription: 'Projects page Borislav Dukov - Web Developer',
         ogImage: 'https://www.borislavdukov.com/Bdukov.png',

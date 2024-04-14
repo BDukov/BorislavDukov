@@ -19,12 +19,13 @@ export default function About() {
   const isInView4 = useInView(ref4, { onc: true });
 
   usePageSEO({
+    type: 'websitee',
     title: 'About page',
     description: 'About Borislav Dukov - Web Developer',
     keywords: ["about", 'borislav', 'dukov', 'web developer', 'developer'],
     ogTitle: 'About page',
     ogDescription: 'About page Borislav Dukov - Web Developer',
-    ogImage: 'https://www.borislavdukov.com/Bdukov.png',
+    ogImage: 'https://borislavdukov.com/Bdukov.png',
     ogUrl: 'https://borislavdukov.com/about'
   })
 
