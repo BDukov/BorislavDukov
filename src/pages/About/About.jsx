@@ -362,10 +362,11 @@ export default function About() {
                 </div>
                 <motion.div className="story-image"
                                                                       style={{
-                                                                        transform: isInView4 ? "none" : "translateX(200px)",
+                                                                        transform: isInView4 ? "none" : "translateY(200px)",
                                                                         opacity: isInView4 ? 1 : 0,
                                                                         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-                                                                      }}>
+                                                                      }}
+                                                                      >
                     <img src="./freelance.jpg" alt="" />
                 </motion.div>
             </div>
