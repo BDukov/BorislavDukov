@@ -19,3 +19,14 @@
         align-items: center;
         justify-content: space-between;
 }
+
+@media (max-width: 530px) {
+    .services-page .services-banner .container img {
+        width: 250px;
+    }
+
+    .services-page .services-banner .container h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+}
