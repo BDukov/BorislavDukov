@@ -7,6 +7,7 @@ import {
   faLinkedin,
   faUpwork,
 } from "@fortawesome/free-brands-svg-icons";
+import { motion, useInView } from 'framer-motion'
 
 import emailjs from '@emailjs/browser';
 
@@ -27,6 +28,11 @@ function SocialIcon({ icon }) {
 }
 
 export default function Contacts() {
+
+  const ref = useRef(null);
+  const ref1 = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const isInView1 = useInView(ref1, { once: true });
 
   const form = useRef();
 
@@ -51,12 +57,30 @@ export default function Contacts() {
     <>
       <div className="contacts">
 
-        <div className="banner">
+        <div className="banner"
+        ref={ref}>
           <div className="container">
             <div className="banner-info">
-              <h1>contacts.</h1>
-              <h2>Get in touch with me via social media or email.</h2>
-              <ul className="social-icons">
+              <motion.h1
+                                      style={{
+                                        transform: isInView ? "none" : "translateX(-200px)",
+                                        opacity: isInView ? 1 : 0,
+                                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                                      }}
+              >contacts.</motion.h1>
+              <motion.h2
+                                                    style={{
+                                                      transform: isInView ? "none" : "translateX(-200px)",
+                                                      opacity: isInView ? 1 : 0,
+                                                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s",
+                                                    }}
+              >Get in touch with me via social media or email.</motion.h2>
+              <motion.ul className="social-icons"
+                                                    style={{
+                                                      transform: isInView ? "none" : "translateX(-200px)",
+                                                      opacity: isInView ? 1 : 0,
+                                                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.9s",
+                                                    }}>
                 <Link
                   to="https://www.facebook.com/profile.php?id=100001198746109"
                   target="_blank"
@@ -83,19 +107,36 @@ export default function Contacts() {
                     <SocialIcon icon={faUpwork} />
                   </li>
                 </Link>
-              </ul>
+              </motion.ul>
             </div>
-            <div className="banner-image">
+            <motion.div className="banner-image"
+                                                  style={{
+                                                    transform: isInView ? "none" : "translateX(200px)",
+                                                    opacity: isInView ? 1 : 0,
+                                                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                                                  }}>
               <img src="./dukov.png" alt="" />
-            </div>
+            </motion.div>
           </div>
         </div>
 
-        <div className='contacts-section'>
+        <div className='contacts-section'
+        ref={ref1}>
           <div className="container">
-            <h3>Send me an email</h3>
+            <motion.h3
+                                                  style={{
+                                                    transform: isInView1 ? "none" : "translateX(-200px)",
+                                                    opacity: isInView1 ? 1 : 0,
+                                                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                                                  }}
+                                                  >Send me an email</motion.h3>
 
-        <form className="contact-form" ref={form} onSubmit={sendEmail}>
+        <motion.form className="contact-form" ref={form} onSubmit={sendEmail}
+                                              style={{
+                                                transform: isInView1 ? "none" : "translateY(200px)",
+                                                opacity: isInView1 ? 1 : 0,
+                                                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                                              }}>
 
           <div className="top">
 
@@ -124,7 +165,7 @@ export default function Contacts() {
 
           <button type="submit">Send email</button>
       
-        </form>
+        </motion.form>
           </div>
       </div>
       </div>

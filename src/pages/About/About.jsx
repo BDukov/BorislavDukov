@@ -1,48 +1,103 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 import "./About.css";
 
 export default function About() {
+  const ref = useRef(null);
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null)
+  const ref4 = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const isInView1 = useInView(ref1, { once: true });
+  const isInView2 = useInView(ref2, { once: true });
+  const isInView3 = useInView(ref3, { once: true });
+  const isInView4 = useInView(ref4, { onc: true });
   return (
     <>
       <div className="about">
 
-        <div className="banner">
+        <div className="banner"
+        ref={ref}
+        >
           <div className="container">
-            <div className="banner-info">
-              <h1>about.</h1>
-              <h2>
+            <div  className="banner-info">
+              <motion.h1
+                      style={{
+                        transform: isInView ? "none" : "translateX(-200px)",
+                        opacity: isInView ? 1 : 0,
+                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                      }}
+              >about.</motion.h1>
+              <motion.h2
+                                    style={{
+                                      transform: isInView ? "none" : "translateX(-200px)",
+                                      opacity: isInView ? 1 : 0,
+                                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s",
+                                    }}
+                                    >
                 I'm graduated JavaScript Web Developer based in Dimitrovgrad,
                 Bulgaria
-              </h2>
-              <p>
+              </motion.h2>
+              <motion.p
+                                    style={{
+                                      transform: isInView ? "none" : "translateX(-200px)",
+                                      opacity: isInView ? 1 : 0,
+                                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.9s",
+                                    }}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Architecto, quae!
-              </p>
+              </motion.p>
             </div>
-            <div className="banner-image">
+            <motion.div
+                                  style={{
+                                    transform: isInView ? "none" : "translateX(200px)",
+                                    opacity: isInView ? 1 : 0,
+                                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.9s",
+                                  }}
+                                   className="banner-image">
               <img src="./dukov.png" alt="" />
-            </div>
+            </motion.div>
           </div>
         </div>
 
-        <div className="skills">
+        <div className="skills"
+        ref={ref1}>
             <div className="container">
 
-            <div className="design-skills">
+            <motion.div className="design-skills"
+                                  style={{
+                                    transform: isInView1 ? "none" : "translateX(-200px)",
+                                    opacity: isInView1 ? 1 : 0,
+                                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                                  }}
+            >
                 <h3>Design</h3>
                 <p>UI design</p>
                 <p>UX design</p>
                 <p>Figma</p>
                 <p>Canva</p>
-            </div>
+            </motion.div>
 
-            <div className="skills-image">
+            <motion.div className="skills-image"
+                                  style={{
+                                    transform: isInView1 ? "none" : "translateY(200px)",
+                                    opacity: isInView1 ? 1 : 0,
+                                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                                  }}
+                                  >
                 <img src="./diagram2.png" alt="" />
-            </div>
+            </motion.div>
 
-            <div className="coding-skills">
+            <motion.div className="coding-skills"
+                                  style={{
+                                    transform: isInView1 ? "none" : "translateX(200px)",
+                                    opacity: isInView1 ? 1 : 0,
+                                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                                  }}>
                 <h3>Coding</h3>
                 <p>Front-end development</p>
                 <p>HTML / CSS</p>
@@ -53,17 +108,28 @@ export default function About() {
                 <p>Angular</p>
                 <p>MongoDB</p>
                 <p>NodeJs</p>
-            </div>
+            </motion.div>
 
             </div>
         </div>
 
-        <div className="hobby">
+        <div className="hobby"
+        ref={ref2}>
             <div className="container">
-                <div className="hobby-image">
+                <motion.div className="hobby-image"
+                                      style={{
+                                        transform: isInView2 ? "none" : "translateX(-200px)",
+                                        opacity: isInView2 ? 1 : 0,
+                                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                                      }}>
                     <img src="./fishing.png" alt="" />
-                </div>
-                <div className="hobby-info">
+                </motion.div>
+                <motion.div className="hobby-info"
+                                      style={{
+                                        transform: isInView2 ? "none" : "translateX(200px)",
+                                        opacity: isInView2 ? 1 : 0,
+                                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                                      }}>
                     <h3>Hobbies</h3>
                     <p>I drink a lot of coffee</p>
                     <p>I like to read a lot of books</p>
@@ -73,102 +139,171 @@ export default function About() {
                     <p>I love the mountains and walks by mountain rivers and dams</p>
                     <p>My favorite food is the berries</p>
 
-                </div>
+                </motion.div>
             </div>
         </div>
 
-        <div className="applications">
+        <div className="applications"
+        ref={ref3}>
             <div className="container">
                 <h3>Тechnologies I use</h3>
                 <div className="stack">
 
-                    <div id="angular" className="tech-app">
+                    <motion.div id="angular" className="tech-app"
+                                                          style={{
+                                                            transform: isInView3 ? "none" : "translateY(200px)",
+                                                            opacity: isInView3 ? 1 : 0,
+                                                            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                                                          }}>
                         <h3 className="alt">Angular</h3>
                         <Link to='https://angular.io/' target="_blank">
                         <img src="./angular.png" alt="" />
                         </Link>
-                    </div>
+                    </motion.div>
 
-                    <div id="react" className="tech-app">
+                    <motion.div id="react" className="tech-app"
+                    style={{
+                      transform: isInView3 ? "none" : "translateY(200px)",
+                      opacity: isInView3 ? 1 : 0,
+                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    }}>
                         <h3 className="alt">React</h3>
                         <Link to='https://react.dev/' target="_blank">
                         <img src="./react.png" alt="" />
                         </Link>
-                    </div>
+                    </motion.div>
 
-                    <div id="wordpress" className="tech-app">
+                    <motion.div id="wordpress" className="tech-app"
+                    style={{
+                      transform: isInView3 ? "none" : "translateY(200px)",
+                      opacity: isInView3 ? 1 : 0,
+                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    }}>
                         <h3 className="alt">WordPress</h3>
                         <Link to='https://wordpress.com/' target="_blank">
                         <img src="./wordpress.png" alt="" />
                         </Link>
-                    </div>
+                    </motion.div>
 
-                    <div id="node-js" className="tech-app">
+                    <motion.div id="node-js" className="tech-app"
+                    style={{
+                      transform: isInView3 ? "none" : "translateY(200px)",
+                      opacity: isInView3 ? 1 : 0,
+                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    }}>
                         <h3 className="alt">NodeJs</h3>
                         <Link to='https://nodejs.org/en' target="_blank">
                         <img src="./nodejs.png" alt="" />
                         </Link>
-                    </div>
+                    </motion.div>
 
-                    <div id="mongo" className="tech-app">
+                    <motion.div id="mongo" className="tech-app"
+                    style={{
+                      transform: isInView3 ? "none" : "translateY(200px)",
+                      opacity: isInView3 ? 1 : 0,
+                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    }}>
                         <h3 className="alt">MongoDB</h3>
                         <Link to='https://www.mongodb.com/' target="_blank">
                         <img src="./mongodb.png" alt="" />
                         </Link>
-                    </div>
+                    </motion.div>
 
-                    <div id="javascript" className="tech-app">
+                    <motion.div id="javascript" className="tech-app"
+                    style={{
+                      transform: isInView3 ? "none" : "translateY(200px)",
+                      opacity: isInView3 ? 1 : 0,
+                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    }}>
                         <h3 className="alt">JavaScript</h3>
                         <Link to='https://www.javascript.com/' target="_blank">
                         <img src="./javascript.png" alt="" />
                         </Link>
-                    </div>
+                    </motion.div>
 
-                    <div id="typescript" className="tech-app">
+                    <motion.div id="typescript" className="tech-app"
+                    style={{
+                      transform: isInView3 ? "none" : "translateY(200px)",
+                      opacity: isInView3 ? 1 : 0,
+                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    }}>
                         <h3 className="alt">TypeScript</h3>
                         <Link to='https://www.typescript.org/' target="_blank">
                         <img src="./typescript.png" alt="" />
                         </Link>
-                    </div>
+                    </motion.div>
 
-                    <div id="html" className="tech-app">
+                    <motion.div id="html" className="tech-app"
+                    style={{
+                      transform: isInView3 ? "none" : "translateY(200px)",
+                      opacity: isInView3 ? 1 : 0,
+                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    }}>
                         <h3 className="alt">HTML</h3>
                         <Link to='' target="_blank">
                         <img src="./html.png" alt="" />
                         </Link>
-                    </div>
+                    </motion.div>
 
-                    <div id="css" className="tech-app">
+                    <motion.div id="css" className="tech-app"
+                    style={{
+                      transform: isInView3 ? "none" : "translateY(200px)",
+                      opacity: isInView3 ? 1 : 0,
+                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    }}>
                         <h3 className="alt">CSS</h3>
                         <Link to='https://developer.mozilla.org/en-US/docs/Web/CSS' target="_blank">
                         <img src="./css.png" alt="" />
                         </Link>
-                    </div>
+                    </motion.div>
 
-                    <div id="openai" className="tech-app">
+                    <motion.div id="openai" className="tech-app"
+                    style={{
+                      transform: isInView3 ? "none" : "translateY(200px)",
+                      opacity: isInView3 ? 1 : 0,
+                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    }}>
                         <h3 className="alt">OpenAi</h3>
                         <Link to='https://openai.com/' target="_blank">
                         <img src="./openai.png" alt="" />
                         </Link>
-                    </div>
+                    </motion.div>
 
-                    <div id="scrum" className="tech-app">
+                    <motion.div id="scrum" className="tech-app"
+                    style={{
+                      transform: isInView3 ? "none" : "translateY(200px)",
+                      opacity: isInView3 ? 1 : 0,
+                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    }}>
                         <h3 className="alt">SCRUM</h3>
                         <Link to='https://www.scrum.org/' target="_blank">
                         <img src="./scrum.png" alt="" />
                         </Link>
-                    </div>
+                    </motion.div>
                     
                 </div>
 
             </div>
         </div>
 
-        <div className="story">
+        <div className="story"
+        ref={ref4}>
             <div className="container">
                 <div className="story-info">
-                    <h3>My story</h3>
-                    <p>
+                    <motion.h3
+                                                                          style={{
+                                                                            transform: isInView4 ? "none" : "translateX(-200px)",
+                                                                            opacity: isInView4 ? 1 : 0,
+                                                                            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                                                                          }}
+                                                                          >My story</motion.h3>
+                    <motion.p
+                                                      style={{
+                                                        transform: isInView4 ? "none" : "translateX(-200px)",
+                                                        opacity: isInView4 ? 1 : 0,
+                                                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s",
+                                                      }}
+                                                      >
                     I am 33 years old and a real enthusiast in the world of
                 the programming to which I have directed my passion and efforts through
                 last years. With a diploma in Web Developer and a master's degree in
@@ -176,30 +311,50 @@ export default function About() {
                 projects using technologies like Angular and React. With rich
                 skill set in technologies such as, JavaScript, TypeScript, HTML,
                 CSS, Firebase, WordPress, PHP, MongoDB and NodeJs.
-              </p>
-              <p>
+              </motion.p>
+              <motion.p
+                                                                    style={{
+                                                                      transform: isInView4 ? "none" : "translateX(-200px)",
+                                                                      opacity: isInView4 ? 1 : 0,
+                                                                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s",
+                                                                    }}>
               My quest for constant self-improvement and learning
                 excels in programming. I totally am
                 dedicated to the development and improvement of his skills.
-              </p>
-              <p>
+              </motion.p>
+              <motion.p
+                                                                    style={{
+                                                                      transform: isInView4 ? "none" : "translateX(-200px)",
+                                                                      opacity: isInView4 ? 1 : 0,
+                                                                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s",
+                                                                    }}>
               In my spare time, I find solace and inspiration in
                 spinning fishing and reading books, especially related ones
                 with stoicism. My love for nature, mountains, rivers and
                 dams not only enriches my personal life but also influences the
                 my professional activity, where this passion is reflected in
                 my designs and applications.
-              </p>
-              <p>
+              </motion.p>
+              <motion.p
+                                                                    style={{
+                                                                      transform: isInView4 ? "none" : "translateX(-200px)",
+                                                                      opacity: isInView4 ? 1 : 0,
+                                                                      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.9s",
+                                                                    }}>
               My goals are to provide web solutions that excel
                 customer expectations and create measurable success for them. I am dedicated to bringing innovation and creative approaches to everyone
                 a project with which I contribute to the enrichment of the Internet
                 the space and create a positive impact.
-                </p>
+                </motion.p>
                 </div>
-                <div className="story-image">
+                <motion.div className="story-image"
+                                                                      style={{
+                                                                        transform: isInView4 ? "none" : "translateX(200px)",
+                                                                        opacity: isInView4 ? 1 : 0,
+                                                                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                                                                      }}>
                     <img src="./freelance.jpg" alt="" />
-                </div>
+                </motion.div>
             </div>
         </div>
       </div>

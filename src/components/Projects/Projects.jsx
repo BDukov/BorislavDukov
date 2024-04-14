@@ -11,7 +11,6 @@ export default function Projects() {
     <>
       <div className="projects">
         <motion.p
-          whileHover={{ scale: 1.1 }}
           style={{
             transform: isInView ? "none" : "translateY(-200px)",
             opacity: isInView ? 1 : 0,
@@ -25,7 +24,6 @@ export default function Projects() {
         <div className="container">
           <motion.article
             ref={ref}
-            whileHover={{ scale: 1.1 }}
             style={{
               transform: isInView ? "none" : "translateY(200px)",
               opacity: isInView ? 1 : 0,
@@ -40,7 +38,6 @@ export default function Projects() {
           </motion.article>
 
           <motion.article
-            whileHover={{ scale: 1.1 }}
             style={{
               transform: isInView ? "none" : "translateY(200px)",
               opacity: isInView ? 1 : 0,
@@ -55,7 +52,6 @@ export default function Projects() {
           </motion.article>
 
           <motion.article
-            whileHover={{ scale: 1.1 }}
             style={{
               transform: isInView ? "none" : "translateY(200px)",
               opacity: isInView ? 1 : 0,
