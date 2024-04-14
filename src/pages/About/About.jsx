@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 import "./About.css";
+import usePageSEO from "../../hooks/userPageSEO";
 
 export default function About() {
   const ref = useRef(null);
@@ -16,6 +17,17 @@ export default function About() {
   const isInView2 = useInView(ref2, { once: true });
   const isInView3 = useInView(ref3, { once: true });
   const isInView4 = useInView(ref4, { onc: true });
+
+  usePageSEO({
+    title: 'About page',
+    description: 'About Borislav Dukov - Web Developer',
+    keywords: ["about", 'borislav', 'dukov', 'web developer', 'developer'],
+    ogTitle: 'About page',
+    ogDescription: 'About page Borislav Dukov - Web Developer',
+    ogImage: 'https://www.borislavdukov.com/Bdukov.png',
+    ogUrl: 'https://borislavdukov.com/about'
+  })
+
   return (
     <>
       <div className="about">

@@ -1,10 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link } from 'react-router-dom';
+import usePageSEO from '../../hooks/userPageSEO';
 
 
 import './ProjectsPage.css'
 
 export default function ProjectsPage(){
+    usePageSEO({
+        title: 'Projects page',
+        description: 'Projects of Borislav Dukov - Web Developer',
+        keywords: ["projects", 'borislav', 'dukov', 'web developer', 'developer', 'portfolio'],
+        ogTitle: 'Projects page',
+        ogDescription: 'Projects page Borislav Dukov - Web Developer',
+        ogImage: 'https://www.borislavdukov.com/Bdukov.png',
+        ogUrl: 'https://borislavdukov.com/projects'
+      });
 
     return(
         <>

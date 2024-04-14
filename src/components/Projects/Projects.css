@@ -91,3 +91,10 @@
     margin-top: 0.4em;
     align-self: flex-start;
 }
+
+
+@media (max-width: 828px) {
+    .projects {
+        padding: 3em 0;
+    }
+}

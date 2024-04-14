@@ -8,6 +8,7 @@ import {
   faUpwork,
 } from "@fortawesome/free-brands-svg-icons";
 import { motion, useInView } from 'framer-motion'
+import usePageSEO from "../../hooks/userPageSEO";
 
 import emailjs from '@emailjs/browser';
 
@@ -28,6 +29,16 @@ function SocialIcon({ icon }) {
 }
 
 export default function Contacts() {
+
+  usePageSEO({
+    title: 'Contacts page',
+    description: 'Contacts with Borislav Dukov - Web Developer',
+    keywords: ["contacts", 'borislav', 'dukov', 'web developer', 'developer'],
+    ogTitle: 'Contacts page',
+    ogDescription: 'Contacts page Borislav Dukov - Web Developer',
+    ogImage: 'https://www.borislavdukov.com/Bdukov.png',
+    ogUrl: 'https://borislavdukov.com/home'
+  })
 
   const ref = useRef(null);
   const ref1 = useRef(null);
