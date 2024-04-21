@@ -30,12 +30,12 @@ export default function ProjectsPage(){
                 <motion.h1
                                 initial={{opacity: 0}}
                                 animate={{opacity: 1, x: [100, 0]}}
-                                transition={{ ease: "easeOut", duration: 2, delay: 0.5}}
+                                transition={{ ease: "easeOut", duration: 1, delay: 0.5}}
                 >Explore My Portfolio</motion.h1>
                 <motion.img 
                 initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                transition={{ ease: "easeOut", duration: 4, delay: 0.5}}
+                animate={{opacity: 1, y: [100, 0]}}
+                transition={{ ease: "easeOut", duration: 1, delay: 0.5}}
                 src="./Bdukov.png" alt="" />
 
 
