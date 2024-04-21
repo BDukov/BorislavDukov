@@ -2,6 +2,8 @@
 import { Link } from 'react-router-dom';
 import usePageSEO from '../../hooks/userPageSEO';
 
+import { motion } from "framer-motion";
+
 
 import './ProjectsPage.css'
 
@@ -17,18 +19,27 @@ export default function ProjectsPage(){
         ogUrl: 'https://borislavdukov.com/projects'
       });
 
+
     return(
         <>
         <div className="projects-page">
             <div className="projects-section">
 
-            <div className="container">
+            <div className="container" >
                 
-                <h1>Explore My Portfolio</h1>
-                <img src="./Bdukov.png" alt="" />
+                <motion.h1
+                                initial={{opacity: 0}}
+                                animate={{opacity: 1, x: [100, 0]}}
+                                transition={{ ease: "easeOut", duration: 2, delay: 0.5}}
+                >Explore My Portfolio</motion.h1>
+                <motion.img 
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{ ease: "easeOut", duration: 4, delay: 0.5}}
+                src="./Bdukov.png" alt="" />
 
 
-                <div className="portfolio-content">
+                <div className="portfolio-content" >
 
                         <Link to='https://www.nadezhdadicheva.com/' target='_blank'>
                 <article className='card'>
@@ -38,6 +49,18 @@ export default function ProjectsPage(){
                     <div className='on-hover'>
                     <p>NadezhdaDicheva</p>
                     <p id='category'>Portfolio</p>
+                    </div>
+                </article>
+                        </Link>
+
+                        <Link to='https://z7-task1-pp39.vercel.app/' target='_blank'>
+                <article className='card'>
+                    <div className="ar-16x9">
+                            <img src="./Projects/z7-task1.png" alt="" />
+                    </div>
+                    <div className='on-hover'>
+                    <p>Z7 Task1</p>
+                    <p id='category'>Landing page</p>
                     </div>
                 </article>
                         </Link>
